@@ -1,130 +1,130 @@
-Words = {};
-Words.List = [];
+words = {};
+wordList = [];
 
-Main = {};
-Main.WordArray = [];
-Main.WordUArray = [];
+main = {};
+mainWordArray = [];
+mainWordUArray = [];
 
-Main.Lives = 4;
-Main.NumInWordBank= Words.Length;
+mainLives = 4;
+mainNumInWordBank = wordList.length;
 
-Main.Word = "Welcome Young Padawan";
-Main.WordU="";
+mainWord = "Welcome Young Padawan";
+mainWordU ="";
 
 // Everything begins right here
 
-Main.PullWord = function(){
-    Main.Word = Words.List[(Math.floor(Math.random()*Main.NumInWordBank))];
+mainPullWord = function(){
+   mainword = wordList[(Math.floor(Math.random()*mainNumInWordBank))];
 }
 
-Main.SetUnderline = function(){
-    Main.PullWord();
-    for(i=0; i<Main.Word.length; i++){
-        Main.WordArray[i] = Main.Word.charAt(i);
-    Main.WordUArray[i] = "_";    
+mainSetUnderline = function(){
+    mainPullWord();
+    for(i=0; i< mainWordLength; i++){
+        mainWordArray[i] = mainWord.charAt(i);
+    mainWordUArray[i] = "_";    
 }
-Main.WordU = Main.WordUArray.join("");
-document.getElementByID("WORD").innerHTML = Main.WordU;
-document.getElementById("numLetters").innerHTML = Main.Word.length;
+mainWordU = mainWordUArray.join("");
+document.getElementByID("WORD").innerHTML = mainWordU;
+document.getElementById("numLetters").innerHTML = mainwordLength;
 }
 
-Main.UpdateLetter = function(letter){
-    Main.Changes = 0;
-    for(i=0; i<Main.Word.length; i++){
-        Main.WordArray[i] = Main.Word.charAt(i);
-        if(Main.Word.charAt(i) == letter){
-            Main.WordUArray [i] = letter;
-            Main.Changes += 1;
+mainUpdateLetter = function(letter){
+    main.Changes = 0;
+    for(i=0; i < mainWordLength; i++){
+        mainWordArray[i] = mainWord.charAt(i);
+        if(mainWord.charAt(i) == letter){
+            mainWordUArray [i] = letter;
+            mainChanges += 1;
             
         }
     }
-    if(Main.Changes < 1){
-        Main.Lives -=1;
-        document.getElementById("lives").innerHTML = Main.Lives;
+    if(mainChanges < 1){
+        mainLives -=1;
+        document.getElementById("lives").innerHTML = mainLives;
     }
-    Main.WordU = Main.WordUArray.join("");
-    document.getElementById("Word").innerHTML = Main.WordU;
+    mainWordU = mainWordUArray.join("");
+    document.getElementById("Word").innerHTML = mainWordU;
 
-    Main.Word1 = Main.WordArray.join("");
-    Main.Word2 = Main.WordUArray.join("");
+    mainWord1 = mainWordArray.join("");
+    mainWord2 = mainWordUArray.join("");
 
-    if(Main.Word1 == Main.Word2){
+    if(mainWord1 == mainWord2){
         alert("The Force is Strong Within You");
         window.location.reload();
 
     }
-    if(Main.Lives < 1){
-        document.getElementById("Word").innerHTML == Main.Word1;
+    if(mainLives < 1){
+        document.getElementById("Word").innerHTML == mainWord1;
         alert("You Disappoint Young Jedi Try Again");
         window.location.reload();
     }
 }
 
-Main.PullWord();
-Main.SetUnderline();
+mainPullWord();
+mainSetUnderline();
 
 
 
 
 
-Words.List[0] = "";
-Words.List[1] = "";
-Words.List[2] = "";
-Words.List[3] = "";
-Words.List[4] = "";
-Words.List[5] = "";
-Words.List[6] = "";
-Words.List[7] = "";
-Words.List[8] = "";
-Words.List[9] = "";
+wordList[0] = "";
+wordList[1] = "";
+wordList[2] = "";
+wordList[3] = "";
+wordList[4] = "";
+wordList[5] = "";
+wordList[6] = "";
+wordList[7] = "";
+wordList[8] = "";
+wordList[9] = "";
 
 
 
-Words.List[0] = "vader";
-Words.List[1] = "anakin";
-Words.List[2] = "yoda";
-Words.List[3] = "light";
-Words.List[4] = "dark";
-Words.List[5] = "master";
-Words.List[6] = "padawan";
-Words.List[7] = "saber";
-Words.List[8] = "monster";
-Words.List[9] = "princess";
+wordList[0] = "vader";
+wordList[1] = "anakin";
+wordList[2] = "yoda";
+wordList[3] = "light";
+wordList[4] = "dark";
+wordList[5] = "master";
+wordList[6] = "padawan";
+wordList[7] = "saber";
+wordList[8] = "monster";
+wordList[9] = "princess";
 
-Words.List[10] = "leia";
-Words.List[11] = "chewy";
-Words.List[12] = "han";
-Words.List[13] = "solo";
-Words.List[14] = "force";
-Words.List[15] = "darth";
-Words.List[16] = "sith";
-Words.List[17] = "empire";
-Words.List[18] = "republic";
-Words.List[19] = "rebels";
-
-
-Words.List[20] = "storm";
-Words.List[21] = "trooper";
-Words.List[22] = "planet";
-Words.List[23] = "universe";
-Words.List[24] = "obiwan";
-Words.List[25] = "emporer";
-Words.List[26] = "sidius";
-Words.List[27] = "kylo";
-Words.List[28] = "ren";
-Words.List[29] = "death";
+wordList[10] = "leia";
+wordList[11] = "chewy";
+wordList[12] = "han";
+wordList[13] = "solo";
+wordList[14] = "force";
+wordList[15] = "darth";
+wordList[16] = "sith";
+wordList[17] = "empire";
+wordList[18] = "republic";
+wordList[19] = "rebels";
 
 
-Words.List[30] = "choke";
-Words.List[31] = "push";
-Words.List[32] = "pull";
-Words.List[33] = "skywalker";
-Words.List[34] = "awaken";
-Words.List[35] = "last";
-Words.List[36] = "jedi";
-Words.List[37] = "order";
-Words.List[38] = "empire";
-Words.List[39] = "padme";
+wordList[20] = "storm";
+wordList[21] = "trooper";
+wordList[22] = "planet";
+wordList[23] = "universe";
+wordList[24] = "obiwan";
+wordList[25] = "emporer";
+wordList[26] = "sidius";
+wordList[27] = "kylo";
+wordList[28] = "ren";
+wordList[29] = "death";
 
 
-Words.Length = Words.List.length;
+wordList[30] = "choke";
+wordList[31] = "push";
+wordList[32] = "pull";
+wordList[33] = "skywalker";
+wordList[34] = "awaken";
+wordList[35] = "last";
+wordList[36] = "jedi";
+wordList[37] = "order";
+wordList[38] = "empire";
+wordList[39] = "padme";
+
+
+wordList = wordList.length;
